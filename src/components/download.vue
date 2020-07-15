@@ -33,7 +33,7 @@
               <b-button variant="outline-light" class="btn">DOWNLOADS🔗</b-button>
             </b-col>
             <b-col id="col">
-              <b-button variant="outline-light" class="btn">RELEASE NOTES📝</b-button>
+              <b-button @click="onClick()" variant="outline-light" class="btn">RELEASE NOTES📝</b-button>
             </b-col>
           </b-row>
         </b-container>
@@ -137,10 +137,47 @@
   </div>
 </template>
 <script>
+//DOWNLOAD CODE
+import Vue from 'vue'
+import axios from 'axios'
+import Vueaxios from 'vue-axios'
+
+Vue.use(Vueaxios,axios)
 
 export default {
+data () {
+    return {
+      info: null
+    }
+  },
+  methods:{
+async onClick () {
+    
+
+      axios.get('http://localhost:8087/downloadFile',
+      {
+        method: 'GET',
+        responseType: 'blob',
+         headers: {
+            'Content-Type': 'application/json'
+          }
+      }).then(response => {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data]));
+     var fileLink = document.createElement('a');
   
-};
+     fileLink.href = fileURL;
+     fileLink.setAttribute('download', 'RELEASE-NOTES.txt');
+     document.body.appendChild(fileLink);
+   
+     fileLink.click();
+          })
+        .catch(function (err) {
+          console.log('FAILURE!!'+err)
+        })
+        }
+  }
+  
+}
 </script>
 <style scoped>
 #app {
