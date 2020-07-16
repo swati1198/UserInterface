@@ -1,25 +1,16 @@
 <template>
   <div id="app">
-
-
-    
-
-
-<div>
-  <b-navbar class="nav">
-    <b-navbar-nav>
-      <h1>
-          <span class="span">DOWNLOAD</span></h1>
-    </b-navbar-nav>
-  </b-navbar>
-  
-</div>
-
-
-
-<b-row id="row">
-      <b-col>
-        <b-container class="bv-example-row">
+    <div>
+      <b-navbar class="nav">
+        <b-navbar-nav>
+          <h1>
+            <span class="span">DOWNLOAD</span></h1>
+        </b-navbar-nav>
+      </b-navbar>
+    </div>
+        <b-row id="row">
+          <b-col>
+            <b-container class="bv-example-row">
           <b-row>
             <span id="span1">RELEASE 3.0.5</span>
           </b-row>
@@ -39,7 +30,7 @@
         </b-container>
       </b-col>
       <b-col>
-        <img src="./man.svg" alt />
+        <img src="../assets/man.svg" alt />
       </b-col>
     </b-row>
     <b-container class="bv-example-row" id="container"></b-container>
@@ -51,7 +42,7 @@
         <b-card
           id="b1"
           style="max-width: 20rem;"
-          img-src="./list.svg"
+          img-src="../assets/list.svg"
           img-alt="number"
           img-top
         >
@@ -64,7 +55,7 @@
         <b-card
           id="b1"
           style="max-width: 20rem;"
-          img-src="./cloud.svg"
+          img-src="../assets/cloud.svg"
           img-alt="cloud"
           img-top
         >
@@ -76,7 +67,7 @@
         <b-card
           id="b1"
           style="max-width: 20rem;"
-          img-src="./book.svg"
+          img-src="../assets/book.svg"
           img-alt="book"
           img-top
         >
@@ -124,24 +115,10 @@
       
     </b-form>
   </div>
-
-
-
-
-
-
-
-
-    
-    
-  </div>
+ </div>
 </template>
-<script>
 
-export default {
-  
-};
-</script>
+
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

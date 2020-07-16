@@ -1,52 +1,35 @@
 <template>
   <div id="app">
-   
-
-
-   <div>
+    <div>
          <b-navbar class="nav">
-    <b-navbar-nav>
-        <h1>
-          <span class="span">CONTACT</span></h1>
-    </b-navbar-nav>
-  </b-navbar>
-
-
-    </div>
-
-
-
-<div>
-     <b-container class="bv-example-row" id="cont">
- 
-
-       <b-form @submit.prevent="submitData" method="post">
-
-          <b-form-input type="text" v-model="post.fname" required placeholder="Enter first name" name="fname"/><br><br>
-           <b-form-input type="text" v-model="post.lname" required placeholder="Enter last name" name="lname"/><br><br>
-        <b-form-input type="text" v-model="post.company" required placeholder="Enter your comapny name" name="company"/><br><br>
-        <b-form-input type="text" v-model="post.phone" required placeholder="Enter your contact number" name="phone"/><br><br>
-        <b-form-input type="email" v-model="post.email" required placeholder="Enter your email Id" name="email"/><br><br>
-          <b-form-textarea type="text" v-model="post.message" required placeholder="Enter Your message"  id="txtarea" name="message">
-            </b-form-textarea> 
-            <b-form-group >
-            <b-form-checkbox-group >
-              <b-form-checkbox value="me">I agree to Privacy Policy</b-form-checkbox>
-            </b-form-checkbox-group>
-            </b-form-group>   
-            <b-button type="submit" variant="light" class="btn" >SEND</b-button> 
-              </b-form>
-   </b-container>   
-   </div>
-
-   
+            <b-navbar-nav>
+              <h1>
+                <span class="span">CONTACT</span></h1>
+            </b-navbar-nav>
+          </b-navbar>
+      </div>
+      <div>
+        <b-container class="bv-example-row" id="cont">
+          <b-form @submit.prevent="submitData" method="post">
+              <b-form-input type="text" v-model="post.fname" required placeholder="Enter first name" name="fname"/><br><br>
+              <b-form-input type="text" v-model="post.lname" required placeholder="Enter last name" name="lname"/><br><br>
+              <b-form-input type="text" v-model="post.company" required placeholder="Enter your comapny name" name="company"/><br><br>
+              <b-form-input type="text" v-model="post.phone" required placeholder="Enter your contact number" name="phone"/><br><br>
+              <b-form-input type="email" v-model="post.email" required placeholder="Enter your email Id" name="email"/><br><br>
+              <b-form-textarea type="text" v-model="post.message" required placeholder="Enter Your message"  id="txtarea" name="message">
+              </b-form-textarea> 
+                  <b-form-group >
+                    <b-form-checkbox-group >
+                      <b-form-checkbox value="me">I agree to Privacy Policy</b-form-checkbox>
+                    </b-form-checkbox-group>
+                  </b-form-group>   
+                  <b-button type="submit" variant="light" class="btn" >SEND</b-button> 
+          </b-form>
+        </b-container>   
+      </div>
   </div>
 </template>
-
 <script>
-
-
-
 export default {
   
   name:"contact" ,
@@ -77,9 +60,7 @@ methods:
     }
 }
     }
-  
-
-</script>
+  </script>
 
 <style scoped>
 #app {
